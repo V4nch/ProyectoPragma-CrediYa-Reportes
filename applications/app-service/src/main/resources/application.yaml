@@ -18,6 +18,11 @@ spring:
         jwt:
           issuer-uri: "https://idp.example.com/issuer"
           client-id: "myclientid"
+security:
+  jwt:
+    secret: "${JWT_SECRET:my-super-secret-key-that-is-at-least-32-chars-long}"
+    expiration: 3600
+    json-exp-roles: "/roles"
 entrypoint:
   sqs:
     region: "us-east-2"
@@ -26,8 +31,6 @@ entrypoint:
     maxNumberOfMessages: 10
     visibilityTimeoutSeconds: 10
     numberOfThreads: 1
-jwt:
-  json-exp-roles: "/roles"
 management:
   endpoints:
     web:

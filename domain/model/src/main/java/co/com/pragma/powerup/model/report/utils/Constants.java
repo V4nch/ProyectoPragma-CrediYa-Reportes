@@ -3,7 +3,6 @@ package co.com.pragma.powerup.model.report.utils;
 public class Constants {
     public static final String COUNT_REPORT_ID = "REPORT_COUNT_LOAN_APPROVED";
     public static final String AMOUNT_REPORT_ID = "REPORT_AMOUNT_LOAN_APPROVED";
-    public static final String ROLE_ADMIN = "hasRole('ADMIN')";
     public static final String SUMMARY_GET_REPORT = "GET report";
     public static final String DESCRIPTION_GET_REPORT = "Allows getting a report";
     public static final String CODE_200 = "200";
@@ -38,4 +37,19 @@ public class Constants {
     public static final String PATH_REPORT = "/api/v1/reportes";
     public static final String CONTENT_TYPE = "application/json";
     public static final String GET_NAME_FUNCTION = "getReport";
+    public static final String API_CREDIYA = "API CrediYa";
+    public static final String VERSION_1 = "1.0";
+    public static final String LOAN_APP_DESCRIPTION = "API for managing loan applications in CrediYa";
+    public static final String BEARER_AUTH = "BearerAuth";
+    public static final String BEARER = "bearer";
+    public static final String JWT = "JWT";
+    public static final String AUTHORIZATION = "Authorization";
+    public static final String SWAGGER_UI_HTML = "/swagger-ui.html";
+    public static final String SWAGGER_UI_ALL = "/swagger-ui/**";
+    public static final String V3_API_DOCS = "/v3/api-docs/**";
+    public static final String WEBJARS = "/webjars/**";
+    public static final String SWAGGER_INDEX = "/swagger-ui/index.html";
+    private Constants() {
+        throw new IllegalStateException("Utility class");
+    }
 }

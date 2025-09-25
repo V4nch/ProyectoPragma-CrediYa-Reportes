@@ -59,7 +59,6 @@ private  final ReportUseCase reportUseCase;
             )
         }
     )
-    @PreAuthorize(Constants.ROLE_ADMIN)
     public Mono<ServerResponse> getReport(ServerRequest request) {
         log.info(Constants.REPORT_RECEIVED);
 

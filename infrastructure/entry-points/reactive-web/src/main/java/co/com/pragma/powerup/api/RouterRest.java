@@ -14,6 +14,8 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 
 @Configuration
 public class RouterRest {
+
+    @Bean
     @RouterOperations({
     @RouterOperation(
             path = Constants.PATH_REPORT,
@@ -22,7 +24,6 @@ public class RouterRest {
             beanClass = Handler.class,
             beanMethod = Constants.GET_NAME_FUNCTION
     )})
-    @Bean
     public RouterFunction<ServerResponse> routerFunction(Handler handler) {
         return route(GET(Constants.PATH_REPORT), handler::getReport);
     }
